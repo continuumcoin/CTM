@@ -1,4 +1,4 @@
-ContinuumCoin [CTM]
+ContinuumCoin
 
 SHA256 Proof of Work, based on Bitcoin 0.8.99
 
