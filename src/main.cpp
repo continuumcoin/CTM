@@ -1267,15 +1267,15 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 60 * 60; // 1 hour
+static const int64 nTargetTimespan = 60 * 30; // 30 minutes
 static const int64 nTargetSpacing = 30; // 30 seconds
-static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 120 blocks
+static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 60 blocks
 
-static const int64 nAveragingInterval = nInterval * 20; // 40 blocks
-static const int64 nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 40 minutes
+static const int64 nAveragingInterval = nInterval * 2; // 120 blocks
+static const int64 nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 60 minutes
 
-static const int64 nMaxAdjustDown = 400; // max of 400% adjustment down
-static const int64 nMaxAdjustUp = 400; // max of 400% adjustment up
+static const int64 nMaxAdjustDown = 20; // max of 20% adjustment down
+static const int64 nMaxAdjustUp = 10; // max of 10% adjustment up
 
 static const int64 nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustDown) / 100;
 
