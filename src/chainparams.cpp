@@ -27,7 +27,6 @@ public:
         pchMessageStart[1] = 0x03;
         pchMessageStart[2] = 0x04;
         pchMessageStart[3] = 0x05;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("") << OP_CHECKSIG;
         nDefaultPort = 25535;
         nRPCPort = 25536;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
@@ -41,6 +40,7 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("") << OP_CHECKSIG;
         txNew.vout[0].nValue = 1 * COIN;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
