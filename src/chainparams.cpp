@@ -27,6 +27,7 @@ public:
         pchMessageStart[1] = 0x03;
         pchMessageStart[2] = 0x04;
         pchMessageStart[3] = 0x05;
+        vAlertPubKey = ParseHex("0470ef16e228d49a635cf8be30018f52f355e4f9d7721e6792cc0ce12835008a1bf4d1d50a9c096fa80af2784b6b050b079563fe11634d8c6401c46d32d96d72a6"); //pubkey for boradcast msg
         nDefaultPort = 25535;
         nRPCPort = 25536;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
