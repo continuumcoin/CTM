@@ -41,7 +41,7 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 1 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0408f90a285f5992b4ca414f666a64f92724864d92ab36f7c95a78d26da9bd996f47bace83078878f8108bf019463eb003126b0706f911f59e26e3c090a317093c") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -66,7 +66,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000567bbebf0cde56b9d36d3476eb1ea5c5060a45006e3523e5eaab5e5e212"));
         assert(genesis.hashMerkleRoot == uint256("0xb929ecd9c646676b88098ad7a1031e0ab2baf390901083e3f22292b26d8c50b4"));
 
-        vSeeds.push_back(CDNSSeedData("emiko.dyndns.info", "emiko.dyndns.info"));
+        vSeeds.push_back(CDNSSeedData("andarazoroflove.org", "andarazoroflove.org"));
 
 
         base58Prefixes[PUBKEY_ADDRESS] = 28;
